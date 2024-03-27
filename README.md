@@ -1,6 +1,6 @@
 # Agrobiodiversity_knowledge_networks
 
-Perret, J., Besnard, A., Charpentier, A., & Papuga, G. (2023). Plants stand still but hide: Imperfect and heterogeneous detection is the rule when counting plants. Journal of Ecology. https://doi.org/10.1111/1365-2745.14110
+Doncieux, A., Rignault A., Renard D., Caillon S. Networking knowledge associated to different crop choices: insights from the Gaillac wine-growing region. Submitted to Ecology and Society. 
 Please contact me if something goes wrong with the code, or for any question.
 
 Mail: doncieux.antoine@gmail.com 
