@@ -1,4 +1,4 @@
-# Agrobiodiversity_knowledge_networks
+# Crop diversity knowledge networks
 
 Doncieux, A., Rignault A., Renard D., Caillon S. Networking supports agrobiodiversity decisions: insights from the Gaillac wine-growing region. Submitted to Ecology and Society. 
 
