@@ -1,0 +1,384 @@
+id_provider;id_recipient;crop_diversity_type;variety_name;rootstock_name;type_information;knowledge
+66;26;variety;egiodola;NA;agronomic_content;Agronomic (climatic requirement)
+66;37;rootstock;gamay;fercal;agronomic_content;Soil adaptation (nutrient uptake)
+141;37;rootstock;LDL;1103P;agronomic_content;Soil adaptation (unspecified)
+109;15;clone;merlot;NA;agronomic_content;Agronomic (climatic requirement)
+128;38;rootstock;merlot;110R;agronomic_content;Soil adaptation (drought)
+129;38;rootstock;merlot;110R;agronomic_content;Soil adaptation (drought)
+134;5;rootstock;NA;140Ru;agronomic_content;Soil adaptation (pH)
+134;5;rootstock;NA;fercal;agronomic_content;Soil adaptation (pH)
+59;21;rootstock;NA;fercal;agronomic_content;Soil adaptation (unspecified)
+139;23;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+57;23;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+1;23;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+136;4;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+60;4;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+141;19;rootstock;NA;3309C;agronomic_content;Soil adaptation (unspecified)
+141;19;rootstock;NA;110R;agronomic_content;Soil adaptation (unspecified)
+97;7;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+100;20;rootstock;NA;gravesac;agronomic_content;Soil adaptation (unspecified)
+111;20;rootstock;NA;3309C;agronomic_content;Soil adaptation (unspecified)
+16;22;rootstock;NA;41BMGt;agronomic_content;Soil adaptation (pH)
+128;17;rootstock;NA;1103P;agronomic_content;Soil adaptation (humidity)
+128;17;rootstock;NA;1103P;agronomic_content;Soil adaptation (drought)
+147;17;rootstock;NA;NA;agronomic_content;Soil adaptation (drought)
+147;17;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+147;38;rootstock;NA;110R;agronomic_content;Soil adaptation (drought)
+141;12;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+129;13;rootstock;NA;41BMGt;agronomic_content;Soil adaptation (unspecified)
+129;13;rootstock;NA;fercal;agronomic_content;Soil adaptation (unspecified)
+139;32;rootstock;NA;41BMGt;agronomic_content;Soil adaptation (pH)
+139;32;rootstock;NA;gravesac;agronomic_content;Soil adaptation (pH)
+95;50;rootstock;NA;gravesac;agronomic_content;Soil adaptation (unspecified)
+139;48;rootstock;NA;fercal;agronomic_content;Soil adaptation (unspecified)
+139;48;clone;NA;NA;agronomic_content;Agronomic (climatic requirement)
+65;46;rootstock;NA;fercal;agronomic_content;Soil adaptation (unspecified)
+139;46;rootstock;NA;fercal;agronomic_content;Soil adaptation (unspecified)
+139;46;rootstock;NA;gravesac;agronomic_content;Soil adaptation (unspecified)
+144;45;rootstock;NA;fercal;agronomic_content;Soil adaptation (pH)
+144;45;rootstock;NA;SO4;agronomic_content;Soil adaptation (pH)
+2;52;rootstock;NA;fercal;agronomic_content;Soil adaptation (pH)
+60;4;variety;NA;NA;agronomic_content;Agronomic (climatic requirement)
+134;52;rootstock;NA;fercal;agronomic_content;Soil adaptation (pH)
+129;53;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+128;51;rootstock;NA;44-53M;agronomic_content;Soil adaptation (nutrient uptake)
+128;51;rootstock;NA;RSB1;agronomic_content;Soil adaptation (nutrient uptake)
+134;25;rootstock;NA;gravesac;agronomic_content;Soil adaptation (pH)
+134;25;rootstock;NA;gravesac;agronomic_content;Soil adaptation (unspecified)
+139;15;rootstock;NA;fercal;agronomic_content;Soil adaptation (pH)
+141;14;rootstock;NA;41BMGt;agronomic_content;Soil adaptation (unspecified)
+141;14;rootstock;NA;110R;agronomic_content;Soil adaptation (unspecified)
+66;40;rootstock;NA;fercal;agronomic_content;Soil adaptation (pH)
+132;40;rootstock;NA;fercal;agronomic_content;Soil adaptation (pH)
+66;30;rootstock;NA;110R;agronomic_content;Soil adaptation (drought)
+129;44;rootstock;NA;1103P;agronomic_content;Soil adaptation (unspecified)
+129;44;rootstock;NA;gravesac;agronomic_content;Soil adaptation (unspecified)
+129;44;rootstock;NA;SO4;agronomic_content;Soil adaptation (unspecified)
+141;28;rootstock;NA;3309C;agronomic_content;Soil adaptation (unspecified)
+141;28;rootstock;NA;fercal;agronomic_content;Soil adaptation (unspecified)
+66;26;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+75;26;rootstock;NA;44-53M;agronomic_content;Resistance to soil pests
+141;26;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+129;26;rootstock;NA;NA;agronomic_content;Soil adaptation (unspecified)
+66;31;rootstock;NA;fercal;agronomic_content;Soil adaptation (unspecified)
+66;31;rootstock;NA;SO4;agronomic_content;Soil adaptation (unspecified)
+134;41;rootstock;NA;1103P;agronomic_content;Soil adaptation (drought)
+67;27;rootstock;NA;fercal;agronomic_content;Soil adaptation (unspecified)
+138;35;rootstock;prunelart;fercal;agronomic_content;Soil adaptation (unspecified)
+138;35;rootstock;prunelart;SO4;agronomic_content;Soil adaptation (unspecified)
+144;37;rootstock;sauvignon;SO4;agronomic_content;Soil adaptation (unspecified)
+141;37;rootstock;syrah;RSB1;agronomic_content;Soil adaptation (pH)
+118;32;variety;bouysselet;NA;agronomic_content;Agronomic (unspecified)
+118;32;variety;bouysselet;NA;agronomic_content;Agronomic (yield)
+134;33;clone;braucol;NA;agronomic_content;Agronomic (plant architecture)
+134;33;clone;braucol;NA;agronomic_content;Agronomic (yield)
+129;40;clone;braucol;NA;agronomic_content;Agronomic (yield)
+129;26;variety;braucol_x_disease-resistant_cepage;NA;agronomic_content;Agronomic (yield)
+142;53;variety;cabernet_sauvignon;NA;agronomic_content;Agronomic (yield)
+145;37;variety;caladoc;NA;agronomic_content;Agronomic (yield)
+119;32;variety;camaralet;NA;agronomic_content;Agronomic (unspecified)
+117;16;variety;local_cepages;NA;agronomic_content;Agronomic (unspecified)
+55;16;variety;local_cepages;NA;agronomic_content;Agronomic (unspecified)
+141;6;clone;chardonnay;NA;agronomic_content;Agronomic (yield)
+141;6;rootstock;chardonnay;NA;agronomic_content;Interactions with the graft (yield)
+129;6;clone;chardonnay;NA;agronomic_content;Agronomic (yield)
+129;6;rootstock;chardonnay;SO4;agronomic_content;Interactions with the graft (yield)
+123;48;variety;colombard;NA;agronomic_content;Agronomic (unspecified)
+65;46;variety;colombard;NA;agronomic_content;Agronomic (unspecified)
+126;45;variety;colombard;NA;agronomic_content;Agronomic (unspecified)
+85;45;variety;colombard;NA;agronomic_content;Agronomic (unspecified)
+87;42;variety;colombard;NA;agronomic_content;Agronomic (unspecified)
+66;37;variety;colombard;NA;agronomic_content;Agronomic (yield)
+134;7;clone;duras;NA;agronomic_content;Agronomic (yield)
+138;34;clone;duras;NA;agronomic_content;Agronomic (plant architecture)
+66;26;variety;egiodola;NA;agronomic_content;Agronomic (plant architecture)
+29;26;variety;egiodola;NA;agronomic_content;Agronomic (yield)
+66;37;variety;egiodola;NA;agronomic_content;Agronomic (yield)
+88;45;clone;gamay;NA;agronomic_content;Agronomic (unspecified)
+15;33;clone;gamay;NA;agronomic_content;Agronomic (unspecified)
+107;35;variety;jurancon_n;NA;agronomic_content;Agronomic (unspecified)
+3;35;variety;jurancon_n;NA;agronomic_content;Agronomic (unspecified)
+113;35;variety;jurancon_n;NA;agronomic_content;Agronomic (unspecified)
+68;38;variety;malbec;NA;agronomic_content;Agronomic (plant architecture)
+43;106;variety;malbec;NA;agronomic_content;Agronomic (unspecified)
+84;30;clone;malbec;NA;agronomic_content;Agronomic (yield)
+101;14;variety;marselan;NA;agronomic_content;Agronomic (plant architecture)
+114;14;variety;marselan;NA;agronomic_content;Agronomic (plant architecture)
+141;27;clone;marselan;NA;agronomic_content;Agronomic (yield)
+127;52;clone;mauzac_b;NA;agronomic_content;Agronomic (unspecified)
+129;40;clone;mauzac_b;NA;agronomic_content;Agronomic (yield)
+129;20;clone;mauzac_b;NA;agronomic_content;Agronomic (plant architecture)
+75;21;variety;mauzac_b;NA;agronomic_content;Agronomic (unspecified)
+58;32;variety;mauzac_b;NA;agronomic_content;Agronomic (unspecified)
+9;53;variety;merlot;NA;agronomic_content;Agronomic (unspecified)
+7;53;variety;merlot;NA;agronomic_content;Agronomic (unspecified)
+86;53;variety;merlot;NA;agronomic_content;Agronomic (unspecified)
+146;37;variety;mourvedre;NA;agronomic_content;Agronomic (yield)
+65;48;variety;muscadelle;NA;agronomic_content;Agronomic (yield)
+65;48;variety;muscadelle;NA;agronomic_content;Agronomic (unspecified)
+134;33;clone;NA;NA;agronomic_content;Agronomic (yield)
+141;11;clone;NA;NA;agronomic_content;Agronomic (yield)
+128;21;rootstock;NA;140Ru;agronomic_content;Interactions with the graft (yield)
+141;19;clone;NA;NA;agronomic_content;Agronomic (yield)
+147;17;rootstock;NA;NA;agronomic_content;Interactions with the graft (yield)
+141;12;rootstock;NA;NA;agronomic_content;Interactions with the graft (yield)
+141;12;clone;NA;NA;agronomic_content;Agronomic (yield)
+141;12;clone;NA;NA;agronomic_content;Agronomic (yield)
+129;13;rootstock;NA;SO4;agronomic_content;Interactions with the graft (yield)
+143;47;clone;NA;NA;agronomic_content;Agronomic (yield)
+143;36;rootstock;NA;SO4;agronomic_content;Interactions with the graft (yield)
+139;48;rootstock;NA;fercal;agronomic_content;Interactions with the graft (yield)
+139;48;clone;NA;NA;agronomic_content;Agronomic (yield)
+144;45;clone;NA;NA;agronomic_content;Agronomic (yield)
+129;53;clone;NA;NA;agronomic_content;Agronomic (yield)
+96;51;rootstock;NA;RSB1;agronomic_content;Interactions with the graft (unspecified)
+77;22;variety;NA;NA;agronomic_content;Agronomic (unspecified)
+128;51;rootstock;NA;RSB1;agronomic_content;Interactions with the graft (yield)
+124;52;variety;NA;NA;agronomic_content;Agronomic (plant architecture)
+57;52;variety;NA;NA;agronomic_content;Agronomic (plant architecture)
+90;52;variety;NA;NA;agronomic_content;Agronomic (plant architecture)
+141;30;variety;NA;NA;agronomic_content;Agronomic (plant architecture)
+129;30;variety;NA;NA;agronomic_content;Agronomic (plant architecture)
+129;26;variety;NA;NA;agronomic_content;Agronomic (plant architecture)
+129;38;rootstock;NA;1103P;agronomic_content;Interactions with the graft (yield)
+66;30;clone;NA;NA;agronomic_content;Agronomic (yield)
+66;30;rootstock;NA;110R;agronomic_content;Interactions with the graft (yield)
+129;30;clone;NA;NA;agronomic_content;Agronomic (yield)
+16;102;variety;NA;NA;agronomic_content;Agronomic (unspecified)
+16;116;variety;NA;NA;agronomic_content;Agronomic (unspecified)
+26;44;variety;NA;NA;agronomic_content;Agronomic (plant architecture)
+66;43;rootstock;NA;1103P;agronomic_content;Interactions with the graft (yield)
+129;29;clone;NA;NA;agronomic_content;Agronomic (yield)
+129;44;rootstock;NA;1103P;agronomic_content;Interactions with the graft (yield)
+129;44;rootstock;NA;gravesac;agronomic_content;Interactions with the graft (yield)
+129;44;rootstock;NA;SO4;agronomic_content;Interactions with the graft (yield)
+141;28;clone;NA;NA;agronomic_content;Agronomic (yield)
+66;26;clone;NA;NA;agronomic_content;Agronomic (yield)
+129;26;clone;NA;NA;agronomic_content;Agronomic (yield)
+43;41;rootstock;NA;1103P;agronomic_content;Interactions with the graft (unspecified)
+134;41;rootstock;NA;1103P;agronomic_content;Interactions with the graft (yield)
+30;38;rootstock;NA;110R;agronomic_content;Interactions with the graft (unspecified)
+30;26;rootstock;NA;110R;agronomic_content;Interactions with the graft (unspecified)
+139;20;variety;ondenc;NA;agronomic_content;Agronomic (yield)
+120;16;variety;petit_manseng;NA;agronomic_content;Agronomic (unspecified)
+141;37;variety;pinot_noir;NA;agronomic_content;Agronomic (drought)
+129;33;rootstock;prunelart;3309C;agronomic_content;Interactions with the graft (yield)
+138;35;rootstock;prunelart;fercal;agronomic_content;Interactions with the graft (yield)
+138;35;rootstock;prunelart;SO4;agronomic_content;Interactions with the graft (yield)
+6;43;clone;prunelart;NA;agronomic_content;Agronomic (unspecified)
+129;33;variety;prunelart;NA;agronomic_content;Agronomic (yield)
+129;33;variety;prunelart;NA;agronomic_content;Agronomic (unspecified)
+10;32;variety;prunelart;NA;agronomic_content;Agronomic (unspecified)
+9;50;variety;prunelart;NA;agronomic_content;Agronomic (yield)
+6;39;variety;prunelart;NA;agronomic_content;Agronomic (unspecified)
+65;46;variety;prunelart;NA;agronomic_content;Agronomic (unspecified)
+41;43;variety;prunelart;NA;agronomic_content;Agronomic (yield)
+129;26;variety;ResDur_varieties;NA;agronomic_content;Agronomic (plant architecture)
+29;42;variety;ResDur_varieties;NA;agronomic_content;Agronomic (yield)
+133;41;variety;ResDur_varieties;NA;agronomic_content;Agronomic (plant architecture)
+92;32;variety;romorantin;NA;agronomic_content;Agronomic (unspecified)
+91;32;variety;saint_come;NA;agronomic_content;Agronomic (unspecified)
+129;40;clone;sauvignon_gris;NA;agronomic_content;Agronomic (yield)
+141;6;rootstock;syrah;NA;agronomic_content;Interactions with the graft (yield)
+141;6;clone;syrah;NA;agronomic_content;Agronomic (yield)
+129;6;rootstock;syrah;NA;agronomic_content;Interactions with the graft (yield)
+129;6;clone;syrah;NA;agronomic_content;Agronomic (yield)
+143;36;clone;syrah;NA;agronomic_content;Agronomic (plant architecture)
+143;36;clone;syrah;NA;agronomic_content;Agronomic (yield)
+56;15;clone;syrah;NA;agronomic_content;Agronomic (yield)
+141;27;clone;syrah;NA;agronomic_content;Agronomic (yield)
+10;32;variety;verdanel;NA;agronomic_content;Agronomic (unspecified)
+129;18;variety;ondenc;NA;patrimonial_value;Patrimonial value
+129;18;variety;prunelart;NA;patrimonial_value;Patrimonial value
+103;25;variety;prunelart;NA;patrimonial_value;Patrimonial value
+129;18;variety;verdanel;NA;patrimonial_value;Patrimonial value
+95;50;rootstock;gamay;gravesac;rootstock_interaction;Interactions with the graft (unspecified)
+66;31;rootstock;NA;fercal;rootstock_interaction;Interactions with the graft (unspecified)
+66;31;rootstock;NA;SO4;rootstock_interaction;Interactions with the graft (unspecified)
+80;22;variety;forbidden_hybrids;NA;imprecise;Unspecified
+112;22;variety;forbidden_hybrids;NA;imprecise;Unspecified
+73;24;variety;forbidden_hybrids;NA;imprecise;Unspecified
+98;49;variety;chardonnay;NA;imprecise;Unspecified
+105;49;variety;chardonnay;NA;imprecise;Unspecified
+110;3;variety;egiodola;NA;imprecise;Unspecified
+132;50;clone;gamay;NA;imprecise;Unspecified
+35;24;variety;jurancon_n;NA;imprecise;Unspecified
+139;23;clone;LDL;NA;imprecise;Unspecified
+129;38;clone;malbec;NA;imprecise;Unspecified
+62;25;variety;mauzac_b;NA;imprecise;Unspecified
+129;16;rootstock;NA;NA;imprecise;Unspecified
+75;21;clone;NA;NA;imprecise;Unspecified
+137;21;clone;NA;NA;imprecise;Unspecified
+70;23;rootstock;NA;NA;imprecise;Unspecified
+139;4;clone;NA;NA;imprecise;Unspecified
+128;7;clone;NA;NA;imprecise;Unspecified
+99;17;rootstock;NA;140Ru;imprecise;Unspecified
+129;18;clone;NA;NA;imprecise;Unspecified
+89;10;rootstock;NA;NA;imprecise;Unspecified
+135;10;rootstock;NA;NA;imprecise;Unspecified
+132;9;rootstock;NA;NA;imprecise;Unspecified
+82;9;rootstock;NA;NA;imprecise;Unspecified
+129;9;clone;NA;NA;imprecise;Unspecified
+129;9;rootstock;NA;NA;imprecise;Unspecified
+57;9;rootstock;NA;NA;imprecise;Unspecified
+75;32;clone;NA;NA;imprecise;Unspecified
+65;50;clone;NA;NA;imprecise;Unspecified
+65;50;rootstock;NA;NA;imprecise;Unspecified
+129;50;clone;NA;NA;imprecise;Unspecified
+129;50;rootstock;NA;NA;imprecise;Unspecified
+2;47;rootstock;NA;NA;imprecise;Unspecified
+143;47;rootstock;NA;fercal;imprecise;Unspecified
+143;47;rootstock;NA;SO4;imprecise;Unspecified
+134;49;clone;NA;NA;imprecise;Unspecified
+134;49;rootstock;NA;SO4;imprecise;Unspecified
+129;39;clone;NA;NA;imprecise;Unspecified
+139;46;clone;NA;NA;imprecise;Unspecified
+134;46;clone;NA;NA;imprecise;Unspecified
+147;52;clone;NA;NA;imprecise;Unspecified
+75;52;clone;NA;NA;imprecise;Unspecified
+76;3;variety;NA;NA;imprecise;Unspecified
+81;3;variety;NA;NA;imprecise;Unspecified
+77;3;variety;NA;NA;imprecise;Unspecified
+54;53;clone;NA;NA;imprecise;Unspecified
+54;53;rootstock;NA;NA;imprecise;Unspecified
+64;53;clone;NA;NA;imprecise;Unspecified
+64;53;rootstock;NA;NA;imprecise;Unspecified
+78;3;variety;NA;NA;imprecise;Unspecified
+128;3;variety;NA;NA;imprecise;Unspecified
+104;20;variety;NA;NA;imprecise;Unspecified
+128;51;clone;NA;NA;imprecise;Unspecified
+128;32;variety;NA;NA;imprecise;Unspecified
+103;25;rootstock;NA;riparia;imprecise;Unspecified
+134;25;clone;NA;NA;imprecise;Unspecified
+74;25;rootstock;NA;NA;imprecise;Unspecified
+147;40;rootstock;NA;NA;imprecise;Unspecified
+132;40;clone;NA;NA;imprecise;Unspecified
+128;38;clone;NA;NA;imprecise;Unspecified
+66;43;rootstock;NA;3309C;imprecise;Unspecified
+66;43;rootstock;NA;140Ru;imprecise;Unspecified
+66;43;clone;NA;NA;imprecise;Unspecified
+66;43;rootstock;NA;110R;imprecise;Unspecified
+141;43;rootstock;NA;140Ru;imprecise;Unspecified
+141;43;rootstock;NA;3309C;imprecise;Unspecified
+141;43;clone;NA;NA;imprecise;Unspecified
+141;43;rootstock;NA;110R;imprecise;Unspecified
+134;44;clone;NA;NA;imprecise;Unspecified
+75;26;clone;NA;NA;imprecise;Unspecified
+138;42;clone;NA;NA;imprecise;Unspecified
+147;40;clone;NA;NA;imprecise;Unspecified
+79;37;clone;NA;NA;imprecise;Unspecified
+79;37;rootstock;NA;NA;imprecise;Unspecified
+66;41;clone;NA;NA;imprecise;Unspecified
+134;41;clone;NA;NA;imprecise;Unspecified
+129;41;clone;NA;NA;imprecise;Unspecified
+129;18;rootstock;prunelart;NA;imprecise;Unspecified
+54;48;variety;ResDur_varieties;NA;imprecise;Unspecified
+129;51;variety;ResDur_varieties;NA;imprecise;Unspecified
+57;51;variety;ResDur_varieties;NA;imprecise;Unspecified
+65;48;variety;ResDur_varieties;NA;imprecise;Unspecified
+134;33;clone;braucol;NA;agronomic_content;Agronomic (phenology)
+129;40;clone;braucol;NA;agronomic_content;Agronomic (phenology)
+66;26;variety;egiodola;NA;agronomic_content;Agronomic (phenology)
+128;37;clone;egiodola;NA;agronomic_content;Agronomic (phenology)
+57;38;variety;malbec;NA;agronomic_content;Agronomic (phenology)
+66;43;variety;malbec;NA;agronomic_content;Agronomic (phenology)
+67;43;variety;marselan;NA;agronomic_content;Agronomic (phenology)
+66;43;variety;marselan;NA;agronomic_content;Agronomic (phenology)
+131;38;variety;NA;NA;agronomic_content;Agronomic (phenology)
+66;38;variety;NA;NA;agronomic_content;Agronomic (phenology)
+129;38;variety;NA;NA;agronomic_content;Agronomic (phenology)
+66;37;variety;NA;NA;agronomic_content;Agronomic (phenology)
+134;33;variety;viognier;NA;agronomic_content;Agronomic (phenology)
+23;94;variety;braucol;NA;marketing;Marketability
+66;37;variety;chardonnay;NA;marketing;Marketability
+65;48;variety;colombard;NA;marketing;Marketability
+66;43;variety;colombard;NA;marketing;Marketability
+23;94;variety;duras;NA;marketing;Marketability
+66;43;variety;egiodola;NA;marketing;Marketability
+66;26;variety;egiodola;NA;marketing;Marketability
+66;37;variety;egiodola;NA;marketing;Marketability
+65;49;variety;gamay;NA;marketing;Marketability
+65;45;variety;gamay;NA;marketing;Marketability
+23;94;variety;gamay;NA;marketing;Marketability
+66;31;variety;LDL;NA;marketing;Marketability
+66;43;variety;malbec;NA;marketing;Marketability
+65;48;variety;muscadelle;NA;marketing;Marketability
+65;48;variety;NA;NA;marketing;Marketability
+65;39;variety;NA;NA;marketing;Marketability
+65;52;variety;NA;NA;marketing;Marketability
+65;51;variety;NA;NA;marketing;Marketability
+66;38;variety;NA;NA;marketing;Marketability
+66;30;variety;NA;NA;marketing;Marketability
+66;44;variety;NA;NA;marketing;Marketability
+66;28;variety;NA;NA;marketing;Marketability
+66;27;variety;NA;NA;marketing;Marketability
+139;20;variety;ondenc;NA;marketing;Marketability
+65;45;variety;sauvignon;NA;marketing;Marketability
+57;28;variety;sauvignon;NA;marketing;Marketability
+118;22;variety;bouysselet;NA;oenology_content;Organoletic properties
+118;32;variety;bouysselet;NA;oenology_content;Organoletic properties
+129;25;variety;braucol;NA;oenology_content;Organoletic properties
+119;32;variety;camaralet;NA;oenology_content;Organoletic properties
+117;16;variety;local_cepages;NA;oenology_content;Organoletic properties
+55;16;variety;local_cepages;NA;oenology_content;Organoletic properties
+103;25;variety;LDL;NA;oenology_content;Wine making practices
+23;94;variety;LDL;NA;oenology_content;Wine making practices
+40;121;variety;LDL;NA;oenology_content;Organoletic properties
+23;94;variety;mauzac_b;NA;oenology_content;Wine making practices
+10;22;variety;faux_mauzac;NA;oenology_content;Organoletic properties
+62;20;variety;mauzac_b;NA;oenology_content;Wine making practices
+10;22;variety;mauzac_b;NA;oenology_content;Organoletic properties
+16;22;variety;mauzac_b;NA;oenology_content;Organoletic properties
+58;32;variety;mauzac_b;NA;oenology_content;Organoletic properties
+10;22;variety;mauzac_b;NA;oenology_content;Organoletic properties
+16;8;variety;NA;NA;oenology_content;Organoletic properties
+16;102;variety;NA;NA;oenology_content;Organoletic properties
+16;116;variety;NA;NA;oenology_content;Organoletic properties
+10;23;variety;ondenc;NA;oenology_content;Organoletic properties
+10;22;variety;ondenc;NA;oenology_content;Organoletic properties
+10;115;variety;ondenc;NA;oenology_content;Organoletic properties
+10;108;variety;ondenc;NA;oenology_content;Organoletic properties
+10;32;variety;prunelart;NA;oenology_content;Organoletic properties
+63;51;variety;ResDur_varieties;NA;oenology_content;Organoletic properties
+29;42;variety;ResDur_varieties;NA;oenology_content;Organoletic properties
+130;18;variety;ResDur_varieties;NA;oenology_content;Organoletic properties
+66;41;variety;ResDur_varieties;NA;oenology_content;Organoletic properties
+92;32;variety;romorantin;NA;oenology_content;Organoletic properties
+91;32;variety;saint_come;NA;oenology_content;Organoletic properties
+122;40;variety;sauvignon_gris;NA;oenology_content;Organoletic properties
+10;23;variety;verdanel;NA;oenology_content;Organoletic properties
+10;22;variety;verdanel;NA;oenology_content;Organoletic properties
+10;32;variety;verdanel;NA;oenology_content;Organoletic properties
+10;61;variety;verdanel;NA;oenology_content;Organoletic properties
+10;16;variety;verdanel;NA;oenology_content;Organoletic properties
+83;32;variety;vermantino;NA;oenology_content;Organoletic properties
+142;53;variety;cabernet_sauvignon;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+119;32;variety;camaralet;NA;agronomic_content;Agronomic (phenology)
+129;3;variety;uncomun_cepage;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+129;20;variety;chenin;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+69;45;variety;colombard;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+65;45;variety;colombard;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+64;45;variety;colombard;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+125;24;variety;johanniter;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+68;38;variety;malbec;NA;agronomic_content;Agronomic (phenology)
+57;38;variety;malbec;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+93;26;variety;malbec;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+141;13;clone;mauzac_b;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+129;13;clone;mauzac_b;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+143;36;rootstock;NA;SO4;agronomic_content;Resistance to soil pests
+131;38;variety;NA;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+66;38;variety;NA;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+129;38;variety;NA;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+129;26;variety;NA;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+129;18;clone;prunelart;NA;agronomic_content;Agronomic (phenology)
+110;3;variety;ResDur_varieties;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+129;18;variety;ResDur_varieties;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+64;18;variety;ResDur_varieties;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+128;51;variety;ResDur_varieties;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+66;44;variety;ResDur_varieties;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+129;26;variety;ResDur_varieties;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+29;42;variety;ResDur_varieties;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+63;41;variety;ResDur_varieties;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+133;41;variety;ResDur_varieties;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+125;24;variety;solaris;NA;agronomic_content;Agronomic (resistance to pests and deseases)
+83;32;variety;vermantino;NA;agronomic_content;Agronomic (resistance to pests and deseases)

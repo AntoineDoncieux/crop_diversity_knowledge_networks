@@ -1,0 +1,460 @@
+---
+title: "Networking supports crop diversity decisions: insights from the Gaillac wine-growing
+  region (France)"
+author: "Antoine Doncieux (https://orcid.org/0000-0003-4935-5980), Antoine Rignault (https://orcid.org/0009-0005-0654-2972), Delphine Renard (https://orcid.org/0000-0002-3228-4269), Sophie Caillon (https://orcid.org/0000-0002-1804-2212)"
+date: "2025-08-04"
+output: html_document
+---
+
+```{r global options, include=FALSE}
+rm(list = ls())
+set.seed(1234)
+
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+```{r packages, include=FALSE}
+library(igraph)
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(MASS)
+library(DHARMa)
+library(cowplot)
+
+setwd(rstudioapi::getActiveDocumentContext()$path %>% dirname()) 
+
+
+```
+
+
+# Load data
+```{r data, include=FALSE}
+df_donors_type <- read.csv("df_types_donors_networks.csv", header = TRUE, sep = ";", as.is = TRUE) 
+df_knowledge_contents <- read.csv("df_knowledge_contents.csv", header = TRUE, sep = ";", as.is = TRUE) 
+df_nodes <- read.csv("df_nodes.csv", header = TRUE, sep = ";", as.is = TRUE) 
+df_links <- read.csv("df_links_distincts.csv", header = TRUE, sep = ";", as.is = TRUE) 
+
+
+df_degree_aggregate <- read.csv("df_degree_aggregate.csv", header = TRUE, sep = ";", as.is = TRUE) %>%
+  mutate(across(c(6, 7, 9), as.factor))
+df_degree_variety <- read.csv("df_degree_variety.csv", header = TRUE, sep = ";", as.is = TRUE) %>%
+  mutate(across(c(6, 7, 9), as.factor))
+df_degree_clone <- read.csv("df_degree_clone.csv", header = TRUE, sep = ";", as.is = TRUE) %>%
+  mutate(across(c(6, 7, 9), as.factor))
+df_degree_rootstock <- read.csv("df_degree_rootstock.csv", header = TRUE, sep = ";", as.is = TRUE) %>%
+  mutate(across(c(6, 7, 9), as.factor))
+
+
+
+```
+
+
+# Figure 2: Knowledge providers
+```{r fig2, include=FALSE}
+
+# Cepage subnetwork
+Prop_donor_cepage = df_donors_type %>% 
+  filter(crop_diversity_type == "variety") %>%
+  group_by(donor_type) %>%
+  mutate(Per = length(donor_type)/116) %>%
+  distinct(donor_type,Per) %>%
+  mutate(Domain = "Variety \n (n=116)",
+         Per = Per*100,
+         Per = round(Per,2))
+
+# Clone subnetwork
+Prop_donor_clone = df_donors_type %>% 
+  filter(crop_diversity_type == "clone") %>%
+  group_by(donor_type) %>%
+  mutate(Per = length(donor_type)/66) %>%
+  distinct(donor_type,Per) %>%
+  mutate(Domain = "Clone \n (n=66)",
+         Per = Per*100,
+         Per = round(Per,2))
+
+# Rootstock subnetwork
+Prop_donor_rootstock = df_donors_type %>% 
+  filter(crop_diversity_type == "rootstock") %>%
+  group_by(donor_type) %>%
+  mutate(Per = length(donor_type)/80) %>%
+  distinct(donor_type,Per) %>%
+  mutate(Domain = "Rootstock \n (n=80)",
+         Per = Per*100,
+         Per = round(Per,2))
+
+Df_percent_echange= rbind(Prop_donor_cepage,
+                          Prop_donor_clone,
+                          Prop_donor_rootstock)  %>%
+  mutate(Per = Per/100)
+
+Df_percent_echange$donor_type = factor(Df_percent_echange$donor_type, levels=c("Farmers-based",
+                                                                                 "VN","IFV", "Coop","CA", "AS", "CC", "DC", "LB"))
+
+
+ggplot(Df_percent_echange, aes(donor_type, Per, fill=Domain)) +
+  geom_bar (stat="identity", position = position_dodge())  +
+  theme_bw() +
+  scale_y_continuous(labels = scales::percent) +
+  theme(panel.grid.major = element_blank(),
+        panel.spacing.x = unit(1.1, "lines")) +
+  scale_fill_manual(name = "Domain of knowledge:",
+                    labels = c("Clone (n=66)", "Rootstock (n=80)","Variety (n=116)"),
+                    values = c("#FDE725FF",
+                               "#35B779FF",
+                               "#440154FF")) +
+  xlab("") + ylab("% of events")
+
+```
+
+# Figure 3: Knowledge contents
+```{r fig3, include=FALSE}
+pal_species <-  c("#edf8e9", 
+                   "#a1d99b","#85D54AFF",
+                  "#41ab5d", "#22A884FF","#005a32", # Agronomic
+                  
+                  
+                   "#af8dc3", "#762a83", # Wine 
+                  
+                  "deepskyblue", "#6baed6", # Soils
+                  "#253494", 
+                  
+                  "#bd0026", # Interaction with the graft
+                  
+                   "#FDE725FF", "#8c510a", "gray80") ;
+names(pal_species) <- c("Climatic requirement", 
+                        "Resistance to pests and deseases", "Phenology", "Plant architecture", 
+                        "Yield","Agronomic (unspecified)",
+  
+  "Organoleptic properties","Wine making practices",
+  
+   "Soil adaptation (nutrient uptake)", 
+  "Soil adaptation (pH)", "Soil adaptation (unspecified)",
+  
+  "Interactions with the graft",
+  
+  
+  "Economic value", "Patrimonial value", "NA")
+
+
+# Fill-position 
+
+
+v_factor_levels <- c("Climatic requirement",
+                     "Resistance to pests and deseases", "Phenology", "Plant architecture", 
+                     "Yield","Agronomic (unspecified)","Organoleptic properties","Wine making practices",
+                     "Economic value", "Patrimonial value","Interactions with the graft",
+                     "Soil adaptation (nutrient uptake)", 
+                     "Soil adaptation (pH)", "Soil adaptation (unspecified)","NA")
+
+ggplot(df_knowledge_contents, aes(crop_diversity_type, percentage, fill=factor(knowledge, levels = v_factor_levels))) + geom_bar(stat = "identity",colour="black")  + theme_bw() + 
+  scale_y_continuous(labels = scales::percent) +  theme(panel.grid.major = element_blank(), # remove the major lines
+                                                        panel.grid.minor = element_blank(),
+                                                        panel.spacing.x = unit(1.1, "lines")) +
+  scale_fill_manual( "Contents of knowledge", values=pal_species) + xlab("") + ylab("% of events")
+```
+
+
+# Figure 5: Social networks structure
+```{r fig5, include=FALSE}
+
+# Aggregared network
+
+net <- graph_from_data_frame(d=df_links, vertices=df_nodes, directed = T)
+
+# Function to display triangle 
+mytriangle <- function(coords, v=NULL, params) {
+  vertex.color <- params("vertex", "color")
+  if (length(vertex.color) != 1 && !is.null(v)) {
+    vertex.color <- vertex.color[v]
+  }
+  vertex.size <- 1/200 * params("vertex", "size")
+  if (length(vertex.size) != 1 && !is.null(v)) {
+    vertex.size <- vertex.size[v]
+  }
+  
+  symbols(x=coords[,1], y=coords[,2], bg=vertex.color,
+          stars=cbind(vertex.size, vertex.size, vertex.size),
+          add=TRUE, inches=FALSE)
+}
+
+add_shape("triangle", clip=shapes("sphere")$clip,
+          plot=mytriangle)
+
+V(net)[V(net)$types_sources=="farmers-based"]$shape <- "circle"
+V(net)[V(net)$types_sources=="agricultural_organization"]$shape <- "square"
+V(net)[V(net)$types_sources=="digital_contents"]$shape <- "triangle"
+V(net)[V(net)$types_sources=="longstanding_book"]$shape <- "triangle"
+
+V(net)$label <- V(net)$Label
+
+plot(net,directed=T,vertex.color="#7DBFEE",rescale=T,
+     edge.arrow.size=.1, vertex.label=NA, asp=-1,edge.color = "#A8A8A8",
+     edge.size=4,layout = layout.fruchterman.reingold(net),
+     vertex.size=3,vertex.frame.color="white",edge.width=3, vertex.label.cex=1,vertex.label.color="black")
+
+
+
+# Variety 
+network_variety = net
+
+# Eliminating connections for clone and rootstock data
+network_variety_ok <- delete_edges(network_variety, E(network_variety)[crop_diversity_type== c("clone")])
+network_variety_ok <- delete_edges(network_variety_ok, E(network_variety_ok)[crop_diversity_type== c("rootstock")])
+igraph::get.edge.attribute(network_variety_ok, "crop_diversity_type")
+
+# Removed isolated node
+network_variety_ok_connected <- delete_vertices(network_variety_ok, which(degree(network_variety_ok) == 0))
+
+plot(network_variety_ok_connected,directed=T,vertex.color="#7DBFEE",rescale=T,
+     edge.arrow.size=.09,vertex.label=V(network_variety_ok_connected)$label, 
+     vertex.label.cex=.6,
+      vertex.label.color="#052d68", asp=1,edge.color = "#A8A8A8",
+     edge.size=1,layout = layout.fruchterman.reingold(network_variety_ok_connected),vertex.label.font = 0,
+     vertex.size=degree(network_variety_ok_connected, mode="out")+1,vertex.frame.color="#7DBFEE",edge.width=1.5)
+
+# Clone 
+
+network_clone = net
+network_clone_ok <- delete_edges(network_clone, E(network_clone)[crop_diversity_type== c("variety")])
+network_clone_ok <- delete_edges(network_clone_ok, E(network_clone_ok)[crop_diversity_type== c("rootstock")])
+igraph::get.edge.attribute(network_clone_ok, "crop_diversity_type")
+
+network_clone_ok_connected <- delete_vertices(network_clone_ok, which(degree(network_clone_ok) == 0))
+
+plot(network_clone_ok_connected,directed=T,vertex.color="#7DBFEE",rescale=T,
+     edge.arrow.size=.09,vertex.label=V(network_clone_ok_connected)$label, 
+     vertex.label.cex=.6,
+     edge.width=1, vertex.label.color="#052d68", asp=1,edge.color = "#A8A8A8",
+     edge.size=1,layout = layout.fruchterman.reingold(network_clone_ok_connected),vertex.label.font = 0,
+     vertex.size=degree(network_clone_ok_connected, mode="out")+1,vertex.frame.color="#7DBFEE",edge.width=1.5)
+
+
+# Rootstock 
+
+network_rootstock = net
+network_rootstock_ok <- delete_edges(network_rootstock, E(network_rootstock)[crop_diversity_type== c("variety")])
+network_rootstock_ok <- delete_edges(network_rootstock_ok, E(network_rootstock_ok)[crop_diversity_type== c("clone")])
+igraph::get.edge.attribute(network_rootstock_ok, "crop_diversity_type")
+network_rootstock_ok_connected <- delete_vertices(network_rootstock_ok, which(degree(network_rootstock_ok) == 0))
+
+
+plot(network_rootstock_ok_connected,directed=T,vertex.color="#7DBFEE",rescale=T,
+     edge.arrow.size=.09,vertex.label=V(network_rootstock_ok_connected)$label, 
+     vertex.label.cex=.6,
+     edge.width=1, vertex.label.color="#052d68", asp=1,edge.color = "#A8A8A8",
+     edge.size=1,layout = layout.fruchterman.reingold(network_rootstock_ok_connected),vertex.label.font = 0,
+     vertex.size=degree(network_rootstock_ok_connected, mode="out")+1,vertex.frame.color="#7DBFEE",edge.width=1.5)
+
+```
+
+# Table 5: GLM : Degree distribution and predictors
+
+```{r table5, include=FALSE}
+
+#  Aggregate
+m1_a = glm.nb(out_degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional") + 
+              scale(grape_richness), df_degree_aggregate )
+summary(m1_a)
+confint(m1_a)
+testDispersion(m1_a)
+sim_m1_a <- simulateResiduals(fittedModel = m1_a, plot = F)
+plot(sim_m1_a)
+
+
+m2_a = glm.nb(in_degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional")  + 
+              scale(grape_richness)  , df_degree_aggregate)
+summary(m2_a)
+confint(m2_a)
+testDispersion(m2_a)
+sim_m2_a <- simulateResiduals(fittedModel = m2_a, plot = F)
+plot(sim_m2_a)
+
+m3_a = glm.nb(degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional") + 
+              scale(grape_richness), df_degree_aggregate )
+summary(m3_a)
+confint(m3_a)
+testDispersion(m3_a)
+sim_m3_a <- simulateResiduals(fittedModel = m3_a, plot = F)
+plot(sim_m3_a)
+
+# Variety
+
+m1_b = glm.nb(out_degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional") + 
+              scale(grape_richness), df_degree_variety )
+summary(m1_b)
+confint(m1_b)
+testDispersion(m1_b)
+sim_m1_b <- simulateResiduals(fittedModel = m1_b, plot = F)
+plot(sim_m1_b)
+
+
+m2_b = glm.nb(in_degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional")  + 
+              scale(grape_richness)  , df_degree_variety)
+summary(m2_b)
+confint(m2_b)
+testDispersion(m2_b)
+sim_m2_b <- simulateResiduals(fittedModel = m2_b, plot = F)
+plot(sim_m2_b)
+
+m3_b = glm.nb(degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional") + 
+              scale(grape_richness), df_degree_variety )
+summary(m3_b)
+confint(m3_b)
+testDispersion(m3_b)
+sim_m3_b <- simulateResiduals(fittedModel = m3_b, plot = F)
+plot(sim_m3_b)
+
+# Clone
+
+m1_c = glm.nb(out_degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional") + 
+              scale(grape_richness), df_degree_clone )
+summary(m1_c)
+confint(m1_c)
+testDispersion(m1_c)
+sim_m1_c <- simulateResiduals(fittedModel = m1_c, plot = F)
+plot(sim_m1_c)
+
+
+m2_c = glm.nb(in_degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional")  + 
+              scale(grape_richness)  , df_degree_clone)
+summary(m2_c)
+confint(m2_c)
+testDispersion(m2_c)
+sim_m2_c <- simulateResiduals(fittedModel = m2_c, plot = F)
+plot(sim_m2_c)
+
+m3_c = glm.nb(degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional") + 
+              scale(grape_richness), df_degree_clone )
+summary(m3_c)
+confint(m3_c)
+testDispersion(m3_c)
+sim_m3_c <- simulateResiduals(fittedModel = m3_c, plot = F)
+plot(sim_m3_c)
+
+
+
+# Rootstock
+
+m1_d = glm.nb(out_degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional") + 
+              scale(grape_richness), df_degree_rootstock )
+summary(m1_d)
+confint(m1_d)
+testDispersion(m1_d)
+sim_m1_d <- simulateResiduals(fittedModel = m1_d, plot = F)
+plot(sim_m1_d)
+
+
+m2_d = glm.nb(in_degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional")  + 
+              scale(Grape_richness)  , df_degree_rootstock)
+summary(m2_d)
+confint(m2_d)
+testDispersion(m2_d)
+sim_m2_d <- simulateResiduals(fittedModel = m2_d, plot = F)
+plot(sim_m2_d)
+
+m3_d = glm.nb(degree ~ relevel(type_farmer, ref="wine_maker") + 
+              relevel(social_background, ref="successors") + 
+              relevel(farm_management, ref="conventional") + 
+              scale(Grape_richness), df_degree_rootstock )
+summary(m3_d)
+confint(m3_d)
+testDispersion(m3_d)
+sim_m3_d <- simulateResiduals(fittedModel = m3_d, plot = F)
+plot(sim_m3_d)
+
+```
+
+# Appendix 2: Out-degree distribution
+
+```{r appendix2, include=FALSE}
+out_aggregated = degree(net, mode="out") %>%
+  as.data.frame() %>%
+  rownames_to_column("Id") %>%
+  rename(Out_degree = ".") %>%
+  mutate(crop_diversity_type = "aggregated")
+
+## Cepage #
+out_variety = degree(network_variety_ok_connected, mode="out") %>%
+  as.data.frame() %>%
+  rownames_to_column("Id") %>%
+  rename(Out_degree = ".") %>%
+  mutate(crop_diversity_type = "variety")
+## Clone  #
+out_clone = degree(network_clone_ok_connected, mode="out") %>%
+  as.data.frame() %>%
+  rownames_to_column("Id") %>%
+  rename(Out_degree = ".") %>%
+  mutate(crop_diversity_type = "clone")
+## Rootstock  #
+out_rootstock = degree(network_rootstock_ok_connected, mode="out") %>%
+  as.data.frame() %>%
+  rownames_to_column("Id") %>%
+  rename(Out_degree = ".") %>%
+  mutate(crop_diversity_type = "rootstock")
+
+
+out_degree_aggregate = out_variety %>%
+  full_join(out_aggregated, c("Id", "crop_diversity_type", "Out_degree")) %>%
+  full_join(out_clone, c("Id", "crop_diversity_type", "Out_degree")) %>%
+  full_join(out_rootstock, c("Id", "crop_diversity_type","Out_degree")) %>%
+  mutate(Id = as.numeric(Id)) %>%
+  left_join(df_nodes, "Id")
+
+
+## Aggregated ##
+
+Out_aggre = ggplot(out_degree_aggregate %>% filter(crop_diversity_type == "aggregated") %>% arrange(desc(Out_degree)) %>%
+         slice_head(n = 10), aes(reorder(Label, -Out_degree), y = Out_degree)) +
+  geom_bar(stat = "identity") + theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  xlab("") + ylab("Out-degree")
+
+
+Out_variety = ggplot(out_degree_aggregate %>% filter(crop_diversity_type == "variety") %>% arrange(desc(Out_degree)) %>%
+                     slice_head(n = 10), aes(reorder(Label, -Out_degree), y = Out_degree)) +
+  geom_bar(stat = "identity") + theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  xlab("") + ylab("")
+
+Out_clone = ggplot(out_degree_aggregate %>% filter(crop_diversity_type == "clone") %>% arrange(desc(Out_degree)) %>%
+                     slice_head(n = 10), aes(reorder(Label, -Out_degree), y = Out_degree)) +
+  geom_bar(stat = "identity") + theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  xlab("Knowledge sources") + ylab("Out-degree")
+
+Out_root = ggplot(out_degree_aggregate %>% filter(crop_diversity_type == "rootstock") %>% arrange(desc(Out_degree)) %>%
+                     slice_head(n = 10), aes(reorder(Label, -Out_degree), y = Out_degree)) +
+  geom_bar(stat = "identity") + theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  xlab("Knowledge sources") + ylab("")
+
+plot_grid(Out_aggre,Out_variety,Out_clone,Out_root,
+          nrow=2, ncol=2, labels=c('A', 'B', 'C','D') )
+
+```
+

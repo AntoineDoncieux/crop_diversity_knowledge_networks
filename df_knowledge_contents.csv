@@ -1,0 +1,26 @@
+crop_diversity_type;percentage;knowledge
+variety;0.177215189873418;Agronomic (unspecified)
+clone;0.0555555555555556;Agronomic (unspecified)
+variety;0.0189873417721519;Climatic requirement
+clone;0.0277777777777778;Climatic requirement
+rootstock;0.0816326530612245;Climatic requirement
+variety;0.113924050632911;Economic value
+rootstock;0.224489795918367;Interactions with the graft
+variety;0.120253164556962;NA
+clone;0.472222222222222;NA
+rootstock;0.23469387755102;NA
+variety;0.170886075949367;Organoleptic properties
+variety;0.0126582278481013;Patrimonial value
+clone;0.0555555555555556;Phenology
+variety;0.069620253164557;Phenology
+clone;0.0555555555555556;Plant architecture
+variety;0.0759493670886076;Plant architecture
+rootstock;0.0204081632653061;Resistance to pests and deseases
+variety;0.139240506329114;Resistance to pests and deseases
+clone;0.0277777777777778;Resistance to pests and deseases
+rootstock;0.0204081632653061;Soil adaptation (nutrient uptake)
+rootstock;0.112244897959184;Soil adaptation (pH)
+rootstock;0.306122448979592;Soil adaptation (unspecified)
+variety;0.0189873417721519;Wine making practices
+variety;0.0822784810126582;Yield
+clone;0.305555555555556;Yield
