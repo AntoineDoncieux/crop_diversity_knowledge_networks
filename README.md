@@ -2,7 +2,7 @@
 
 Doncieux, A., Rignault A., Renard D., Caillon S. Networking supports crop diversity decisions: insights from the Gaillac wine-growing region. Submitted to Ecology and Society. 
 
-Data jeopardizing the anonymity of the research participants has been removed. Therefore, the results of Figure 5, Tables 3 and 4 will not be reproducible. Our research project complies with the European General Data Protection Regulation (RGPD) on the protection of individual information under the reference 2-21088.
+Data and code that support the findings of this study are partially available from the GitHub repository: anonymized for blind peer review. Data jeopardizing the anonymity of the research participants has been removed. Our research project complies with the European General Data Protection Regulation (RGPD) on the protection of individual information under the reference 2-21088.
 
 Please contact me if something goes wrong with the code, or for any question.
 
